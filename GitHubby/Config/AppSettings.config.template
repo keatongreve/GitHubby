@@ -1,0 +1,5 @@
+<!-- Copy this file to AppSettings.config -->
+<?xml version="1.0" encoding="utf-8" ?>
+<appSettings>
+  <add key="GitHubApiSecretToken" value="XXXXX" />
+</appSettings>

@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "GitHubby";
+}
+
+<h1>Githubby - A Little GitHub User Search Engine!</h1>
+
+<div class="search">
+    <input type="text" id="user-search" placeholder="Search for a user..." data-bind="value: searchText, valueUpdate: 'input'"/>
+
+    <div data-bind="if: hasResults">
+        <div id="user-search-results" data-bind="foreach: searchResults">
+            <div class="user" data-bind="click: $parent.selectUser, css: { 'selectedUser': login() === $parent.selectedUser() }">
+                <img class="user-image" src="#" data-bind="attr: { src: avatarUrl }" />
+                <span class="user-login" data-bind="text: login"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="details">
+    <div id="selected-user-info" data-bind="with: selectedUserFullData">
+        <h1>
+            <a href="#" target="_blank" data-bind="attr: { href: user.HtmlUrl }, text: fullHeader"></a>
+        </h1>
+        
+        <div data-bind="with: user">
+            <div data-bind="if: Email">
+                <p data-bind="text: 'Email: ' + Email"></p>
+            </div>
+
+            <div data-bind="if: Location">
+                <p data-bind="text: 'Location: ' + Location"></p>
+            </div>
+
+            <div data-bind="if: Company">
+                <p data-bind="text: 'Company: ' + Company"></p>
+            </div>
+        </div>
+
+        <div data-bind="if: publicRepos.length > 0">
+            <h2 data-bind="text: publicRepos.length + ' Public Repositories'"></h2>
+            <div id="public-repos" data-bind="foreach: publicRepos">
+                <h4>
+                    <a href="#" target="_blank" data-bind="attr: { href: HtmlUrl }, text: Name"></a>
+                </h4>             
+            </div>
+        </div>        
+    </div>
+</div>
+
+@Scripts.Render("~/Scripts/Home.Index.js")

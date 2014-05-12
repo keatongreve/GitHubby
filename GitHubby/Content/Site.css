@@ -1,0 +1,111 @@
+﻿body {
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/* Custom styling */
+
+.search {
+    width: 200px;
+    float: left;
+}
+
+.details {
+    float: left;
+}
+
+#user-search-results {
+    float: left;
+    margin: 10px;
+    height: 400px;
+    overflow-y: scroll;
+}
+
+    #user-search-results div.user {
+        width: 120px;
+        height: 130px;
+        margin: 10px;
+        padding-bottom: 5px;
+        border-style: solid;
+        border-color: gray;
+        border-width: 1px;
+        text-align: center;
+    }
+
+    #user-search-results div.user:hover {
+        background-color: beige;   
+    }
+
+.selectedUser, .selectedUser:hover {
+    background-color: #0069ab !important;   
+}
+
+.user-image {
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    margin: 10px 10px 0px;
+}
+
+#selected-user-info {
+    float: left;
+    margin-top: 10px;
+    margin-left: 40px;
+}
