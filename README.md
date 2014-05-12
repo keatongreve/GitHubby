@@ -13,6 +13,7 @@ cool public data about them.
 3. Enable Package Restore!
   1. [Octokit](https://www.nuget.org/packages/Octokit)
   2. [Json.NET](http://www.nuget.org/packages/newtonsoft.json)
+4. Copy GitHubby/Config/AppSettings.config.template to GitHubby/Config/AppSettings.config and put in your personal API token.
 
 ###Current Issues
 
